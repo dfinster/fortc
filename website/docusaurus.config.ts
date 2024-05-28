@@ -67,7 +67,7 @@ const config: Config = {
       style: 'dark',
       links: [
       ],
-      copyright: `Site contents &copy; ${new Date().getFullYear()} David Finster`,
+      // copyright: `&copy; ${new Date().getFullYear()} David Finster`,
     },
     prism: {
       theme: prismThemes.github,
