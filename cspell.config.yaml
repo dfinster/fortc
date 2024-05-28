@@ -1,0 +1,51 @@
+$schema: ./node_modules/@cspell/cspell-types/cspell.schema.json
+version: '0.2'
+language: en-US
+ignorePaths:
+  - .git
+  - .gitignore
+  - .vscodeignore
+  - '*.cjs'
+  - '*.code-workspace'
+  - '*.lock'
+  - '*.log'
+  - '*.vsix'
+  - '*.tsv'
+  - '*.svg'
+  - '**/__snapshots__/**'
+  - '**/server.js'
+  - '**/scripts/ts-json-schema-generator.cjs'
+  - '*.yaml'
+  - '.commitlintrc'
+  - /samples
+  - CHANGELOG.md
+  - cspell.json
+  - cspell*.{json,yaml}
+  - .cspell*.{json,yaml}
+  - dist
+  - docusaurus.config.ts
+  - fixtures/workspaces/**
+  - languageCodes.ts
+  - package-lock.json
+  - fixtures/_server/sampleSourceFiles/**
+  - packages/_server/sampleSourceFiles/**
+  - packages/client/resources/**
+  - packages/client/samples/**
+  - packages/client/server/**
+  - packages/webview-ui/public/assets/**
+  - spell-checker-config.schema.json
+  - testFixtures
+ignoreWords: []
+flagWords:
+  - fuck
+  - shit
+dictionaryDefinitions:
+  - name: fortc
+    path: ./cspell-words.txt
+    addWords: true
+dictionaries:
+  - fortc
+languageSettings:
+  - languageId: '*'
+    allowCompoundWords: false
+useGitignore: true

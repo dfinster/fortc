@@ -1,0 +1,77 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+  ],
+  "extensions": {
+    // List of extensions which should be recommended for users of this workspace.
+    "recommendations": [
+      "streetsidesoftware.code-spell-checker",
+      "DavidAnson.vscode-markdownlint",
+      "yzhang.markdown-all-in-one",
+      "shd101wyy.markdown-preview-enhanced",
+      "unifiedjs.vscode-mdx",
+      "esbenp.prettier-vscode",
+      "darkriszty.markdown-table-prettify",
+      "bierner.emojisense",
+      "ChrisChinchilla.vale-vscode"
+    ],
+    // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+    "unwantedRecommendations": []
+  },
+  "settings": {
+    "cSpell.enabled": true,
+    "explorer.decorations.badges": true,
+    "explorer.decorations.colors": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": false,
+    "editor.glyphMargin": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.renderFinalNewline": "on",
+    "editor.tabSize": 2,
+    "editor.useTabStops": false,
+    "emojisense.unicodeCompletionsEnabled": false,
+    "emojisense.emojiDecoratorsEnabled": false,
+    "files.associations": {
+      "*.mdx": "markdown"
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "git.branchProtection": ["main", "develop"],
+    "github.gitProtocol": "ssh",
+    "markdown.extension.italic.indicator": "_",
+    "markdown.updateLinksOnFileMove.include": [
+      "**/*.{md,mdx,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
+      "**/*.{jpg,jpe,jpeg,png,bmp,gif,ico,webp,avif,tiff,svg,mp4}"
+    ],
+    "markdown.extension.completion.enabled": false,
+    "markdown.extension.orderedList.marker": "one",
+    "markdown.preferredMdPathExtensionStyle": "includeExtension",
+    "markdown.updateLinksOnFileMove.enabled": "prompt",
+    "markdownlint.run": "onSave",
+    "[mdx]": {
+      "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+    },
+    "markdownlint.lintWorkspaceGlobs": [
+      "**/*.{md,mdx,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
+      "!**/bower_components",
+      "!**/node_modules",
+      "!**/vendor",
+      "!**/.git"
+    ],
+    "prettier.jsxSingleQuote": true,
+    "prettier.printWidth": 100,
+    "prettier.singleAttributePerLine": true,
+    "prettier.singleQuote": true,
+    "terminal.integrated.cwd": "website",
+    "vale.doNotShowWarningForFileToBeSavedBeforeLinting": true,
+    "vale.enableSpellcheck": false,
+    "vale.valeCLI.config": "",
+    "vale.valeCLI.minAlertLevel": "suggestion",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.startupEditor": "none",
+  }
+}

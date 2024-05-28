@@ -1,0 +1,8 @@
+# Based on work created and shared by Datadog. Used according to terms described in the Apache License.
+# https://github.com/DataDog/datadog-vale/blob/main/LICENSE
+extends: existence
+message: "Use only one space between words and sentences (not two)."
+level: error
+nonword: true
+tokens:
+  - '[\w.?!,\(\)\-":] {2,}[\w.?!,\(\)\-":]'

@@ -1,0 +1,9 @@
+# Detect repeated words in a sentence.
+# Example: This is is a sentence with a repeated word. (is is)
+---
+extends: repetition
+message: "This word is repeated: '%s'"
+level: error
+alpha: true
+tokens:
+  - '[^\s]+'

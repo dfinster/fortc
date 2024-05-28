@@ -1,0 +1,7 @@
+# Ignore all MDX files per recommendation https://docusaurus.io/docs/markdown-features/react
+
+**/*.mdx
+**/*.md
+**/*.yaml
+**/*.yml
+**/*.json
