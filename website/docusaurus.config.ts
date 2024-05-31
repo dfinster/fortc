@@ -67,7 +67,7 @@ const config: Config = {
       style: 'dark',
       links: [
       ],
-      copyright: `Site contents &copy; ${new Date().getFullYear()} David Finster`,
+      copyright: '<a href="https://github.com/dfinster/fortc/blob/main/LICENSE.md">License</a>',
     },
     prism: {
       theme: prismThemes.github,
