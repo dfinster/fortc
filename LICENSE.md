@@ -9,8 +9,6 @@ Files in these directories are Copyright © [David Finster](mailto:david@fortc.c
 - `website/src`
 - `website/static`
 
----
-
 ## Docusaurus
 
 [Docusaurus is used under the terms of the MIT License](https://github.com/facebook/docusaurus/blob/main/LICENSE):
@@ -36,8 +34,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
 
 ## Everything else
 
