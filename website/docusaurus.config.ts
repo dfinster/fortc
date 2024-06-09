@@ -1,10 +1,10 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'fortc',
-  tagline: 'Finster\'s Occasional Reservoir of Temporary Comments',
+  title: 'David Finster',
+  // tagline: "",
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -32,7 +32,7 @@ const config: Config = {
         },
         blog: {
           showReadingTime: false,
-          routeBasePath: '/', // Serve the blog at the site's root
+          // routeBasePath: '/', // Serve the blog at the site's root
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -50,7 +50,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/profile.jpg',
     navbar: {
-      title: 'fortc',
+      title: 'David Finster',
       // logo: {
       //   alt: 'fortc',
       //   src: 'img/fortc.png',
@@ -65,8 +65,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-      ],
+      links: [],
       copyright: '<a href="https://github.com/dfinster/fortc/blob/main/LICENSE.md">License</a>',
     },
     prism: {
