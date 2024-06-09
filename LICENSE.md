@@ -2,7 +2,7 @@
 
 ## Copyrighted content
 
-Files in these directories are Copyright © [David Finster](mailto:david@fortc.com), and may not be reproduced without permission, unless otherwise specified:
+Files in the following directories are Copyright © [David Finster](mailto:david@fortc.com), and may not be reproduced without permission, unless otherwise specified:
 
 - `website/docs`
 - `website/blog`
