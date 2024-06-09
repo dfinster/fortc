@@ -29,10 +29,21 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          path: 'docs',
+          editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: false,
-          // routeBasePath: '/', // Serve the blog at the site's root
+          blogTitle: "David Finster's Blog",
+          blogDescription: 'Collected opinions and ideas',
+          editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
+          feedOptions: {
+            title: "David Finster's Blog",
+            description: 'Collected opinions and ideas',
+            copyright: 'Copyright ©️ David Finster',
+          },
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -51,11 +62,14 @@ const config: Config = {
     image: 'img/profile.jpg',
     navbar: {
       title: 'David Finster',
-      // logo: {
-      //   alt: 'fortc',
-      //   src: 'img/fortc.png',
-      // },
       items: [
+        { to: 'blog', label: 'Blog', position: 'left' },
+        {
+          type: 'doc',
+          position: 'left',
+          docId: 'index',
+          label: 'Docs',
+        },
         {
           href: 'https://github.com/dfinster',
           label: 'GitHub',
