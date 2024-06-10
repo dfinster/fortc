@@ -1,17 +1,21 @@
 # License Information
 
-Files in these directories are Copyright © [David Finster](mailto:david@fortc.com), and may not be reproduced without permission, unless otherwise specified:
+## Copyrighted content
+
+Files in the following directories are Copyright © [David Finster](mailto:david@fortc.com), and may not be reproduced without permission, unless otherwise specified:
 
 - `website/docs`
 - `website/blog`
 - `website/src`
 - `website/static`
 
-All other content is available under the MIT License, unless otherwise specified.
+## Docusaurus
+
+[Docusaurus is used under the terms of the MIT License](https://github.com/facebook/docusaurus/blob/main/LICENSE):
 
 MIT License
 
-Copyright (c) David Finster
+Copyright (c) Facebook, Inc. and its affiliates.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,13 +35,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----
+## Everything else
 
-[Docusaurus is used under the terms of the MIT License](https://github.com/facebook/docusaurus/blob/main/LICENSE):
+All content not covered by the preceeding sections is available under the MIT License, unless otherwise specified.
 
 MIT License
 
-Copyright (c) Facebook, Inc. and its affiliates.
+Copyright (c) David Finster
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
