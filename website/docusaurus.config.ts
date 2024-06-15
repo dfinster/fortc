@@ -62,6 +62,12 @@ const config: Config = {
     image: 'img/profile.jpg',
     navbar: {
       title: 'David Finster',
+      logo: {
+        alt: 'Logo',
+        src: 'img/apple-touch-icon.png',
+        width: 32,
+        height: 32,
+      },
       items: [
         { to: 'blog', label: 'Blog', position: 'left' },
         {
