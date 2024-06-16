@@ -37,11 +37,11 @@ const config: Config = {
         blog: {
           showReadingTime: false,
           blogTitle: "David Finster's Blog",
-          blogDescription: 'Collected opinions and ideas',
+          blogDescription: '',
           editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
           feedOptions: {
             title: "David Finster's Blog",
-            description: 'Collected opinions and ideas',
+            description: '',
             copyright: 'Copyright ©️ David Finster',
           },
         },
@@ -59,7 +59,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     // Replace with your project's social card
-    image: 'img/profile.jpg',
+    image: 'img/profile.png',
     navbar: {
       title: 'David Finster',
       logo: {
