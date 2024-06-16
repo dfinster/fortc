@@ -59,12 +59,12 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     // Replace with your project's social card
-    image: 'img/profile.png',
+    image: 'img/web-profile.png',
     navbar: {
       title: 'David Finster',
       logo: {
         alt: 'Logo',
-        src: 'img/apple-touch-icon.png',
+        src: 'img/logo.png',
         width: 32,
         height: 32,
       },
