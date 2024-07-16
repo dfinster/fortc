@@ -24,8 +24,9 @@ jobs:
           node-version: 20
           cache: yarn
           cache-dependency-path: './website/yarn.lock'
-          corepack-enable: true
 
+      - name: Enable Corepack
+        run: corepack enable
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website
