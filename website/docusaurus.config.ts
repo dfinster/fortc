@@ -14,6 +14,12 @@ const config: Config = {
   baseUrl: '/',
   trailingSlash: false,
 
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'dfinster', // Usually your GitHub org/user name.
+  projectName: 'fortc', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   onBrokenAnchors: 'throw',
