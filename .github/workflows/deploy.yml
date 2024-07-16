@@ -1,10 +1,5 @@
 name: Deploy to GitHub Pages
 
-defaults:
-  run:
-    shell: bash
-    working-directory: website
-
 on:
   push:
     branches:
@@ -26,14 +21,16 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
+        working-directory: ./website
         run: yarn install --frozen-lockfile
       - name: Build website
+        working-directory: ./website
         run: yarn build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: website/build
+          path: ./website/build
 
   deploy:
     name: Deploy to GitHub Pages
