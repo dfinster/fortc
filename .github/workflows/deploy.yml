@@ -10,7 +10,7 @@ on:
 defaults:
   run:
     shell: bash
-    working-directory: ./website
+    working-directory: ./fortc/website
 
 jobs:
   build:
@@ -26,7 +26,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: pwd && yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
       - name: Build website
         run: yarn build
 
