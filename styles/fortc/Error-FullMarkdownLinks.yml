@@ -1,8 +1,0 @@
-extends: existence
-message: "Improper link format: '%s'. Please specify the file extension."
-level: warning
-nonword: true
-scope: raw
-tokens:
-  # Captures any markdown link to a URL starting with `/` or `.` and not ending with a known extension.
-  - "\\[[^\\]]*\\]\\((\\.)?(\\/)?(\\.|/)(?!.*(\\.md|\\.mdx|\\.png|\\.jpg))[^\\)]*\\)"
