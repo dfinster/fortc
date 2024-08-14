@@ -5,6 +5,7 @@ tags: ['nostalgia']
 ---
 
 I've rediscovered the IBM PC 5150 reference manuals.
+<!-- truncate -->
 
 - The [User Guide](./_media/IBM-PC-Model-5150-Guide-to-Operations_text.pdf) doesn't assume any prior knowledge of computers. It goes into great detail about basic subjects like what the cursor is, how arrow keys work. It's pretty nostalgic for me, because this was my tutor.
 - [DOS 1.0](./_media/6172220_DOS_1.0_Jan82.pdf) was pretty limited. It didn't even support subdirectories. Check page 22 for a fun fact: these machines didn't have a real-time clock, so the date and time had to be entered on every reboot.
