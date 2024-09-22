@@ -1,0 +1,13 @@
+import React from 'react';
+
+interface ImgFlexProps {
+  src: string;
+  alt?: string;
+  style?: React.CSSProperties;
+}
+
+const ImgFlex: React.FC<ImgFlexProps> = ({ src, alt = '', style }) => {
+  return <img src={src} alt={alt} />;
+};
+
+export default ImgFlex;

@@ -1,6 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import imgFlexSrc  from './src/remark/imgFlexSrc';
 
 const config: Config = {
   title: 'David Finster',
@@ -34,6 +35,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          beforeDefaultRemarkPlugins: [imgFlexSrc],
           sidebarPath: './sidebars.ts',
           path: 'docs',
           editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
