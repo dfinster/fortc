@@ -10,7 +10,7 @@ import ImgFlex from '../src/components/ImgFlex';
 
 bleh
 
-<ImgFlex src='some/path/to/a/file/dot.png' />
+<ImgFlex src='./_media/logo.png' alt='hellow world' />
 
 > blockquote
 

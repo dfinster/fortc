@@ -7,6 +7,7 @@ interface ImgFlexProps {
 }
 
 const ImgFlex: React.FC<ImgFlexProps> = ({ src, alt = '', style }) => {
+  console.log('ImgFlex:', src); // Debugging statement
   return <img src={src} alt={alt} />;
 };
 
