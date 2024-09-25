@@ -1,19 +1,11 @@
 ---
 title: Overview
-# sidebar_label: Overview
-sidebar_position: 1
 ---
 
 import ImgFlex from '../src/components/ImgFlex';
 
-<img src='some/path/to/a/file/dot.png' alt='' />
+Hello world!
 
-bleh
-
-<ImgFlex src='./_media/logo.png' alt='hellow world' />
+<ImgFlex src='./_media/logo.png' alt='hello world' />
 
 > blockquote
-
-- item 1
-- item 2
-- item 3

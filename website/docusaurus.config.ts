@@ -1,7 +1,9 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import imgFlexSrc  from './src/remark/imgFlexSrc';
+// import transformImgFlexSrc  from './src/remark-plugin/transform-imgflex-src';
+// import myRemarkPlugin from './src/remark-plugin/my-remark-plugin';
+import remarkImgFlexRequire from './src/plugins/remark-imgflex-require';
 
 const config: Config = {
   title: 'David Finster',
@@ -35,7 +37,9 @@ const config: Config = {
       'classic',
       {
         docs: {
-          beforeDefaultRemarkPlugins: [imgFlexSrc],
+          // remarkPlugins: [remarkImgFlexRequire],
+          beforeDefaultRemarkPlugins: [remarkImgFlexRequire],
+          // remarkPlugins: [myDocusaurusPlugin],
           sidebarPath: './sidebars.ts',
           path: 'docs',
           editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
@@ -43,6 +47,7 @@ const config: Config = {
           showLastUpdateTime: true,
         },
         blog: {
+          remarkPlugins: [remarkImgFlexRequire],
           showReadingTime: false,
           blogTitle: "David Finster's Blog",
           blogDescription: '',
