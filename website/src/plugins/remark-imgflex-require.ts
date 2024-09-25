@@ -17,45 +17,54 @@ const remarkImgFlexRequire: Plugin = () => {
       const mdxNode = node as MdxJsxFlowElement;
 
       if (mdxNode.name === 'ImgFlex') {
-        // Find the 'src' attribute
-        const srcAttribute = mdxNode.attributes.find(
-          (attr): attr is MdxJsxAttribute =>
-            attr.type === 'mdxJsxAttribute' && attr.name === 'src'
-        );
+        // Function to process an attribute
+        const processAttribute = (attrName: string) => {
+          // Find the attribute
+          const attribute = mdxNode.attributes.find(
+            (attr): attr is MdxJsxAttribute =>
+              attr.type === 'mdxJsxAttribute' && attr.name === attrName
+          );
 
-        if (srcAttribute && typeof srcAttribute.value === 'string') {
-          // Prepare the expression
-          const expression = `require('${srcAttribute.value}')`;
+          if (attribute && typeof attribute.value === 'string') {
+            // Prepare the expression
+            const expression = `require('${attribute.value}')`;
 
-          // Parse the expression into an ESTree Expression node
-          const parsedExpression = acorn.parseExpressionAt(expression, 0, {
-            ecmaVersion: 2020,
-            sourceType: 'module',
-          }) as Expression;
+            // Parse the expression into an ESTree Expression node
+            const parsedExpression = acorn.parseExpressionAt(expression, 0, {
+              ecmaVersion: 2020,
+              sourceType: 'module',
+            }) as Expression;
 
-          // Wrap the Expression in a Program node
-          const estree: Program = {
-            type: 'Program',
-            body: [
-              {
-                type: 'ExpressionStatement',
-                expression: parsedExpression,
-              } as ExpressionStatement,
-            ],
-            sourceType: 'module',
-          };
+            // Wrap the Expression in a Program node
+            const estree: Program = {
+              type: 'Program',
+              body: [
+                {
+                  type: 'ExpressionStatement',
+                  expression: parsedExpression,
+                } as ExpressionStatement,
+              ],
+              sourceType: 'module',
+            };
 
-          // Set the 'src' attribute value as an expression
-          const newValue: MdxJsxAttributeValueExpression = {
-            type: 'mdxJsxAttributeValueExpression',
-            value: expression,
-            data: {
-              estree,
-            },
-          };
+            // Set the attribute value as an expression
+            const newValue: MdxJsxAttributeValueExpression = {
+              type: 'mdxJsxAttributeValueExpression',
+              value: expression,
+              data: {
+                estree,
+              },
+            };
 
-          srcAttribute.value = newValue;
-        }
+            attribute.value = newValue;
+          }
+        };
+
+        // Process 'src' attribute
+        processAttribute('src');
+
+        // Process 'darksrc' attribute if it exists
+        processAttribute('darksrc');
       }
     });
   };
