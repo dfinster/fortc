@@ -11,7 +11,9 @@ const tablesortPlugin: Plugin = () => {
       const sortType = match[1];
       th.properties = th.properties || {};
       th.properties['data-sort-method'] = sortType;
-      textNode.value = textNode.value.replace(/\[!!(number|date|filesize|monthname|dotsep)\]/, '').trim();
+      textNode.value = textNode.value
+        .replace(/\[!!(number|date|filesize|monthname|dotsep)\]/, '')
+        .trim();
     }
   };
 
@@ -19,7 +21,13 @@ const tablesortPlugin: Plugin = () => {
     node.properties.id = tableId;
     node.properties.className = Array.isArray(node.properties.className)
       ? node.properties.className.concat('sortable-table')
-      : [node.properties.className, 'sortable-table'].filter(Boolean);
+      : [node.properties.className, 'sortable-table'].filter(
+          (item): item is string | number => typeof item === 'string' || typeof item === 'number'
+        );
+
+    // node.properties.className = Array.isArray(node.properties.className)
+    //   ? node.properties.className.concat('sortable-table')
+    //   : [node.properties.className, 'sortable-table'].filter(Boolean);
   };
 
   return (tree: any) => {
