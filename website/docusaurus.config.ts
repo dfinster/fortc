@@ -1,6 +1,8 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import rehypePluginAddTableAttributes from './plugins/rehype-plugin-add-table-attributes';
+import clientModules from '@generated/client-modules';
 
 const config: Config = {
   title: 'David Finster',
@@ -29,11 +31,13 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  clientModules: ['./src/clientModules/initTablesort.ts'],
   presets: [
     [
       'classic',
       {
         docs: {
+          rehypePlugins: [rehypePluginAddTableAttributes],
           sidebarPath: './sidebars.ts',
           path: 'docs',
           editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
