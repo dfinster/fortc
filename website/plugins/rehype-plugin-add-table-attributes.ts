@@ -15,10 +15,17 @@ const tablesortPlugin: Plugin = () => {
         tableCount += 1;
         const tableId = `sortable-table-${tableCount}`;
 
+        // Assign the unique ID and class to the table
+        node.properties.id = tableId;
+        node.properties.className = (node.properties.className || []).concat('sortable-table');
+
+        console.log(`Processing table with ID: ${tableId}`);
+
         // Look for [!tablesort] directive in the first row (headers)
         node.children?.forEach((child: any) => {
           if (child.tagName === 'thead' && child.children) {
             child.children?.forEach((row: any) => {
+              let isFirstColumn = true; // Track the first column
               row.children?.forEach((th: any) => {
                 th.children?.forEach((textNode: any) => {
                   if (textNode?.type === 'text') {
@@ -29,6 +36,14 @@ const tablesortPlugin: Plugin = () => {
                       textNode.value = textNode.value.replace('[!tablesort]', '').trim();
                       console.log(`Found [!tablesort] directive, making table sortable with ID: ${tableId}`);
                     }
+
+                    // If this is the first column, add the data-sort-default attribute
+                    if (isFirstColumn) {
+                      th.properties = th.properties || {};
+                      th.properties['data-sort-default'] = true;
+                      isFirstColumn = false; // Set to false after processing the first column
+                      console.log(`Added data-sort-default to first column: ${textNode.value}`);
+                    }
                   }
                 });
               });
@@ -36,25 +51,26 @@ const tablesortPlugin: Plugin = () => {
           }
         });
 
-        // If it's a sortable table, assign ID and class
+        // If it's a sortable table, look for [!!number] and [!!date] directives in the headers
         if (isSortableTable) {
-          node.properties.id = tableId;
-          node.properties.className = Array.isArray(node.properties.className)
-            ? node.properties.className.concat('sortable-table')
-            : [node.properties.className, 'sortable-table'].filter((item): item is string | number => Boolean(item));
-
-          // Add the data-sort-default attribute to the first column
           node.children?.forEach((child: any) => {
             if (child.tagName === 'thead' && child.children) {
               child.children?.forEach((row: any) => {
-                let isFirstColumn = true;
                 row.children?.forEach((th: any) => {
-                  if (isFirstColumn) {
-                    th.properties = th.properties || {};
-                    th.properties['data-sort-default'] = true;
-                    isFirstColumn = false;
-                    console.log(`Added data-sort-default to first column of table with ID: ${tableId}`);
-                  }
+                  th.children?.forEach((textNode: any) => {
+                    if (textNode?.type === 'text') {
+                      // Look for the [!!number] or [!!date] directives
+                      const match = textNode.value.match(/\[!!(number|date|filesize|monthname|dotsep)\]/);
+                      if (match) {
+                        const sortType = match[1];
+                        th.properties = th.properties || {};
+                        th.properties['data-sort-method'] = sortType;
+                        // Remove the sorting directive from the visible text
+                        textNode.value = textNode.value.replace(/\[!!(number|date|filesize|monthname|dotsep)\]/, '').trim();
+                        console.log(`Modified header: ${textNode.value}, data-sort-method: ${sortType}`);
+                      }
+                    }
+                  });
                 });
               });
             }
