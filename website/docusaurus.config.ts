@@ -36,21 +36,22 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           path: 'docs',
+          routeBasePath: '/',
           editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
-        blog: {
-          showReadingTime: false,
-          blogTitle: "David Finster's Blog",
-          blogDescription: '',
-          editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
-          feedOptions: {
-            title: "David Finster's Blog",
-            description: '',
-            copyright: 'Copyright ©️ David Finster',
-          },
-        },
+        // blog: {
+        //   showReadingTime: false,
+        //   blogTitle: "David Finster's Blog",
+        //   blogDescription: '',
+        //   editUrl: 'https://github.com/dfinster/fortc/blob/main/website/',
+        //   feedOptions: {
+        //     title: "David Finster's Blog",
+        //     description: '',
+        //     copyright: 'Copyright ©️ David Finster',
+        //   },
+        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -75,13 +76,13 @@ const config: Config = {
         height: 32,
       },
       items: [
-        { to: 'blog', label: 'Blog', position: 'left' },
-        {
-          type: 'doc',
-          position: 'left',
-          docId: 'index',
-          label: 'Docs',
-        },
+        // { to: 'blog', label: 'Blog', position: 'left' },
+        // {
+        //   type: 'doc',
+        //   position: 'left',
+        //   docId: 'index',
+        //   label: 'Docs',
+        // },
         {
           href: 'https://github.com/dfinster',
           label: 'GitHub',
